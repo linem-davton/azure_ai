@@ -1,0 +1,213 @@
+['input_images/building.jpg', 'input_images/street.jpg', 'input_images/somepeople.jpg', 'input_images/person.jpg']
+
+Analyzing input_images/building.jpg
+
+Caption:
+ Caption: 'a large white building with a dome and a large lawn with United States Capitol in the background' (confidence: 64.59%)
+
+Dense Captions:
+ Caption: 'a large white building with a dome and a large lawn' (confidence: 64.59%)
+
+Tags:
+ Tag: 'outdoor' (confidence: 99.93%)
+ Tag: 'cloud' (confidence: 99.79%)
+ Tag: 'grass' (confidence: 99.76%)
+ Tag: 'tree' (confidence: 99.09%)
+ Tag: 'sky' (confidence: 98.95%)
+ Tag: 'building' (confidence: 96.15%)
+ Tag: 'dome' (confidence: 91.38%)
+ Tag: 'presidential palace' (confidence: 91.03%)
+ Tag: 'landmark' (confidence: 89.98%)
+ Tag: 'palace' (confidence: 89.63%)
+ Tag: 'plant' (confidence: 88.77%)
+ Tag: 'courthouse' (confidence: 84.78%)
+ Tag: 'field' (confidence: 82.64%)
+ Tag: 'city' (confidence: 76.11%)
+ Tag: 'large' (confidence: 68.73%)
+ Tag: 'park' (confidence: 54.24%)
+
+Objects:
+ building (confidence: 62.30%)
+  Results saved in output_images/building_objects.jpg
+
+People in image:
+  Results saved in output_images/building_people.jpg
+
+Remove the background from the input_images/building.jpg or generate a foreground matte
+ Segmentation result:
+   Output image buffer size (bytes) = 939810
+   Output image height = 600
+   Output image width = 800
+   File output_images/building-background_removal.jpg written to disk
+
+Remove the background from the input_images/building.jpg or generate a foreground matte
+ Segmentation result:
+   Output image buffer size (bytes) = 7282
+   Output image height = 600
+   Output image width = 800
+   File output_images/building-foreground_matting.jpg written to disk
+
+Analyzing input_images/street.jpg
+
+Caption:
+ Caption: 'a man walking a dog on a leash on a street' (confidence: 82.07%)
+
+Dense Captions:
+ Caption: 'a man walking a dog on a leash on a street' (confidence: 82.05%)
+ Caption: 'a man walking on a street' (confidence: 69.02%)
+ Caption: 'a yellow car on the street' (confidence: 78.20%)
+ Caption: 'a black dog walking on the street' (confidence: 75.31%)
+ Caption: 'a blurry image of a blue car' (confidence: 82.01%)
+ Caption: 'a yellow taxi cab on the street' (confidence: 72.44%)
+
+Tags:
+ Tag: 'outdoor' (confidence: 99.87%)
+ Tag: 'land vehicle' (confidence: 99.02%)
+ Tag: 'vehicle' (confidence: 98.89%)
+ Tag: 'building' (confidence: 98.55%)
+ Tag: 'road' (confidence: 95.98%)
+ Tag: 'wheel' (confidence: 95.14%)
+ Tag: 'street' (confidence: 94.71%)
+ Tag: 'person' (confidence: 93.01%)
+ Tag: 'clothing' (confidence: 91.19%)
+ Tag: 'taxi' (confidence: 90.95%)
+ Tag: 'car' (confidence: 84.01%)
+ Tag: 'dog' (confidence: 82.68%)
+ Tag: 'yellow' (confidence: 77.08%)
+ Tag: 'walking' (confidence: 74.11%)
+ Tag: 'city' (confidence: 64.80%)
+ Tag: 'woman' (confidence: 57.53%)
+
+Objects:
+ car (confidence: 72.40%)
+ taxi (confidence: 77.00%)
+ person (confidence: 78.10%)
+ dog (confidence: 54.40%)
+  Results saved in output_images/street_objects.jpg
+
+People in image:
+  Results saved in output_images/street_people.jpg
+
+Remove the background from the input_images/street.jpg or generate a foreground matte
+ Segmentation result:
+   Output image buffer size (bytes) = 756606
+   Output image height = 533
+   Output image width = 800
+   File output_images/street-background_removal.jpg written to disk
+
+Remove the background from the input_images/street.jpg or generate a foreground matte
+ Segmentation result:
+   Output image buffer size (bytes) = 10843
+   Output image height = 533
+   Output image width = 800
+   File output_images/street-foreground_matting.jpg written to disk
+
+Analyzing input_images/somepeople.jpg
+
+Caption:
+ Caption: 'a group of people crossing a street' (confidence: 89.84%)
+
+Dense Captions:
+ Caption: 'a group of people crossing a street' (confidence: 89.83%)
+ Caption: 'a person with a bag' (confidence: 64.16%)
+ Caption: 'a woman in a dress walking' (confidence: 69.91%)
+ Caption: 'a person wearing a brown skirt' (confidence: 66.40%)
+ Caption: 'a person holding a umbrella' (confidence: 61.85%)
+ Caption: 'a person carrying a bag' (confidence: 74.08%)
+ Caption: 'a group of people walking on a street' (confidence: 83.59%)
+ Caption: 'a traffic light with a green light' (confidence: 75.44%)
+ Caption: 'a person with a backpack' (confidence: 80.22%)
+
+Tags:
+ Tag: 'outdoor' (confidence: 99.64%)
+ Tag: 'clothing' (confidence: 99.51%)
+ Tag: 'building' (confidence: 99.37%)
+ Tag: 'footwear' (confidence: 98.71%)
+ Tag: 'road' (confidence: 97.54%)
+ Tag: 'street' (confidence: 97.42%)
+ Tag: 'crosswalk' (confidence: 97.39%)
+ Tag: 'person' (confidence: 97.13%)
+ Tag: 'pedestrian' (confidence: 96.61%)
+ Tag: 'woman' (confidence: 95.73%)
+ Tag: 'way' (confidence: 93.53%)
+ Tag: 'street fashion' (confidence: 87.79%)
+ Tag: 'walking' (confidence: 86.18%)
+ Tag: 'pedestrian crossing' (confidence: 86.09%)
+ Tag: 'girl' (confidence: 85.46%)
+ Tag: 'city' (confidence: 85.30%)
+ Tag: 'zebra crossing' (confidence: 84.90%)
+ Tag: 'people' (confidence: 82.86%)
+ Tag: 'group' (confidence: 68.92%)
+ Tag: 'sidewalk' (confidence: 61.20%)
+ Tag: 'intersection' (confidence: 55.50%)
+
+Objects:
+ person (confidence: 63.60%)
+ person (confidence: 76.00%)
+ person (confidence: 71.80%)
+ person (confidence: 82.20%)
+ person (confidence: 76.50%)
+ person (confidence: 83.70%)
+  Results saved in output_images/somepeople_objects.jpg
+
+People in image:
+  Results saved in output_images/somepeople_people.jpg
+
+Remove the background from the input_images/somepeople.jpg or generate a foreground matte
+ Segmentation result:
+   Output image buffer size (bytes) = 499362
+   Output image height = 408
+   Output image width = 612
+   File output_images/somepeople-background_removal.jpg written to disk
+
+Remove the background from the input_images/somepeople.jpg or generate a foreground matte
+ Segmentation result:
+   Output image buffer size (bytes) = 19188
+   Output image height = 408
+   Output image width = 612
+   File output_images/somepeople-foreground_matting.jpg written to disk
+
+Analyzing input_images/person.jpg
+
+Caption:
+ Caption: 'a man in a suit' (confidence: 78.56%)
+
+Dense Captions:
+ Caption: 'a man in a suit' (confidence: 78.55%)
+ Caption: 'a man in a suit giving a thumbs up' (confidence: 80.96%)
+
+Tags:
+ Tag: 'clothing' (confidence: 99.72%)
+ Tag: 'person' (confidence: 99.33%)
+ Tag: 'human face' (confidence: 98.89%)
+ Tag: 'man' (confidence: 94.58%)
+ Tag: 'orator' (confidence: 90.42%)
+ Tag: 'glasses' (confidence: 89.57%)
+ Tag: 'speech' (confidence: 89.33%)
+ Tag: 'spokesperson' (confidence: 88.82%)
+ Tag: 'public speaking' (confidence: 85.86%)
+ Tag: 'shirt' (confidence: 85.21%)
+ Tag: 'gentleman' (confidence: 85.02%)
+ Tag: 'suit' (confidence: 84.60%)
+ Tag: 'healthcare' (confidence: 41.78%)
+
+Objects:
+ person (confidence: 87.50%)
+  Results saved in output_images/person_objects.jpg
+
+People in image:
+  Results saved in output_images/person_people.jpg
+
+Remove the background from the input_images/person.jpg or generate a foreground matte
+ Segmentation result:
+   Output image buffer size (bytes) = 558761
+   Output image height = 533
+   Output image width = 800
+   File output_images/person-background_removal.jpg written to disk
+
+Remove the background from the input_images/person.jpg or generate a foreground matte
+ Segmentation result:
+   Output image buffer size (bytes) = 10285
+   Output image height = 533
+   Output image width = 800
+   File output_images/person-foreground_matting.jpg written to disk

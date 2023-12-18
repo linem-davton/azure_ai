@@ -1,0 +1,23 @@
+# Environment Variables
+
+# This comes from customvision.ai
+PROJECT_NAME=IMAGE_CLASSIFICATION
+PROJECT_ID=
+TRAINING_ENDPOINT=<URL>
+TRAINING_KEY=<key>
+
+# For the prediction resource can be either azure AI or azure custom prediction ai resource
+PREDICTION_ENDPOINT=<URL>
+PREDICTION_KEY=<key>
+PREDICTION_RESOURCE_ID=
+
+# Expecting Directory to be in the following format IMAGE_DIRECTORY/CLASS_NAME/IMAGE_FILE
+
+TRAIN_DIRECTORY=train_images
+TEST_DIRECTORY=test_images
+TRAINING_CLASSES=3
+CLASS_0=cat
+CLASS_1=dog
+CLASS_2=car
+# More Classes here
+```
