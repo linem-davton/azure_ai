@@ -1,1 +1,68 @@
-
+Loading environment variables...
+Adding images...
+uploading images for cat
+uploading images for dog
+uploading images for car
+Images per class {'cat': 13, 'dog': 18, 'car': 17}
+Image batch upload failed.
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Image status for image OKDuplicate
+Done!
+Loading environment variables...
+Training...
+Training Complete
+Done!
+Loading environment variables...
+predicting image lion.jpeg with path test_images/lion.jpeg
+Loading environment variables...
+predicting image lion.jpeg with path test_images/lion.jpeg
+	dog: 79.29%
+	cat: 18.22%
+	car: 2.49%
+Done!

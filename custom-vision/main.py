@@ -5,6 +5,7 @@ from msrest.authentication import ApiKeyCredentials
 
 import os, time, uuid
 from dotenv import load_dotenv
+import utils
 
 def main():
     
@@ -26,8 +27,6 @@ def main():
 
     # get the project id of existing project in customvision.ai
     project = trainer.get_project(project_id)
-    
-    print(f'project with id {project.id} and name {project.name}')
     
     return trainer, predictor, project
 
@@ -51,23 +50,23 @@ def upload_images(trainer, project):
     for im_class, class_tag in zip(IM_CLASSES, class_tags):
         print(f'uploading images for {im_class}')
 
-        images_list = os.listdir(os.path.join(TRAIN_DIRECTORY, im_class))
+        images_list, image_names = utils.get_images_from_dir(os.path.join(TRAIN_DIRECTORY, im_class))
         
-        for image in images_list:
-            with open(os.path.join(TRAIN_DIRECTORY, im_class, image), "rb") as image_contents:
-                image_objects.append(ImageFileCreateEntry(name=image, contents=image_contents.read(), tag_ids=[class_tag.id]))
+        for image, image_name in zip(images_list, image_names):
+            with open(image, "rb") as image_contents:
+                image_objects.append(ImageFileCreateEntry(name=image_name, contents=image_contents.read(), tag_ids=[class_tag.id]))
         
         im_per_class[im_class] = (len(images_list))
-            
+
+    print(f'Images per class {im_per_class}')        
     upload_result = trainer.create_images_from_files(project.id, ImageFileCreateBatch(images=image_objects))
     
-    print(im_per_class)
 
     # If the upload fails, we get an exception
     if not upload_result.is_batch_successful:
         print("Image batch upload failed.")
         for image in upload_result.images:
-            print("Image status: ", image.status)
+            print(f'Image status for {image}: {image.status}')
 
 def train_project(trainer, project):
     prediction_resource_id = os.environ["PREDICTION_RESOURCE_ID"]
@@ -76,27 +75,29 @@ def train_project(trainer, project):
     iteration = trainer.train_project(project.id)
     while (iteration.status != "Completed"):
         iteration = trainer.get_iteration(project.id, iteration.id)
-        print ("Training status: " + iteration.status)
+        #print ("Training status: " + iteration.status)
     time.sleep(30)
+    
     # The iteration is now trained. Publish it to the project endpoint
-    trainer.publish_iteration(project.id, iteration.id, "testmodel", prediction_resource_id)
-    print ("Moeel published!")
+    #trainer.publish_iteration(project.id, iteration.id, "testmodel", prediction_resource_id)
+    print ("Training Complete")
 
 def predict_image(predictor, project):
     # Verfiy the project is published via customvision.ai portal
-    
     # Open the sample image and get back the prediction results.
     TEST_DIRECTORY = os.environ["TEST_DIRECTORY"]
-    images_list = os.listdir(os.path.join(TEST_DIRECTORY))
+    images_list, images_name = utils.get_images_from_dir(TEST_DIRECTORY)
 
-    for image in images_list:
-        with open(os.path.join(TEST_DIRECTORY, image), mode="rb") as test_data:
+    for image, image_name in zip(images_list, images_name):
+        with open(image, mode="rb") as test_data:
             # arguments are customvision.ai project id, model name that was published, image data
+            print(f'predicting image {image_name} with path {image}')
             results = predictor.classify_image(project.id, "testmodel", test_data.read())
+        
         # Display the results.
         for prediction in results.predictions:
             print ("\t" + prediction.tag_name + ": {0:.2f}%".format(prediction.probability * 100))
-        print("")
+
 
 if __name__ == "__main__":
     # Loading environment variables

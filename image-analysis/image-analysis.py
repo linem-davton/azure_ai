@@ -13,7 +13,8 @@ import utils
 
 
 def main():
-    global cv_client
+    #global cv_client
+    os.environ['SSL_CERT_DIR']='/etc/ssl/certs' # Must be in Environment    
 
     try:
         # Get Configuration Settings
